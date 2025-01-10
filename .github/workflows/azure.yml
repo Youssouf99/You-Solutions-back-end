@@ -17,7 +17,7 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '17'  # Spécifiez Java 17
-          distribution: 'adoptopenjdk'  # Ajoutez cette ligne pour spécifier la distribution
+          distribution: 'adoptium'  # Ajoutez cette ligne pour spécifier la distribution
           architecture: 'x64'  # Architecture du JDK
           check-latest: false
 
