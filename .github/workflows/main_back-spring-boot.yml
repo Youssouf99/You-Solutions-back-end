@@ -29,6 +29,13 @@ jobs:
           SPRING_MAIL_PORT: ${{ secrets.SPRING_MAIL_PORT }}
           SPRING_MAIL_USERNAME: ${{ secrets.SPRING_MAIL_USERNAME }}
           SPRING_MAIL_PASSWORD: ${{ secrets.SPRING_MAIL_PASSWORD }}
+          
+      - name: Debug environment variables
+        run: |
+          echo "SPRING_MAIL_HOST=$SPRING_MAIL_HOST"
+          echo "SPRING_MAIL_PORT=$SPRING_MAIL_PORT"
+          echo "SPRING_MAIL_USERNAME=$SPRING_MAIL_USERNAME"
+          echo "SPRING_MAIL_PASSWORD=$SPRING_MAIL_PASSWORD"
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
